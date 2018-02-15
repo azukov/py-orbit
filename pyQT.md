@@ -1,12 +1,11 @@
-## Building pyORBIT with pyQt5
+## Building pyORBIT with pyQt5 on RPM based Linux
 ```bash
 yum groupinstall 'Development Tools' 'X Window System'
-```
-Download sip and PyQt5 from [SF](https://sourceforge.net/projects/pyqt/files/).
-```bash
 yum install qt5-qtbase qt5-qtbase-devel python-devel vim epel-release 
 yum install python-pip
 ```
+Download [sip](https://sourceforge.net/projects/pyqt/files/sip/) and [PyQt5](https://sourceforge.net/projects/pyqt/files/PyQt5/).
+
 Install sip
 ```bash
 cd sip-4.19.7
