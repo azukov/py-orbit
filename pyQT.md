@@ -4,7 +4,8 @@ yum groupinstall 'Development Tools' 'X Window System'
 ```
 Download sip and PyQt5 from [SF](https://sourceforge.net/projects/pyqt/files/).
 ```bash
-yum install qt5-qtbase qt5-qtbase-devel python-devel epel-release
+yum install qt5-qtbase qt5-qtbase-devel python-devel vim epel-release 
+yum install python-pip
 ```
 Install sip
 ```bash
@@ -22,4 +23,19 @@ python configure.py --qmake /usr/bin/qmake-qt5
 make
 make install
 cd ..
+```
+Install matplotlib
+```bash
+pip install --upgrade pip
+pip install -U matplotlib
+```
+
+Try standard example with matplotlib (should draw nice plots).
+```bash
+curl -o test-qt.py https://matplotlib.org/_downloads/embedding_in_qt_sgskip.py
+python test-qt.py
+```
+Proceed with [pyORBIT installation](README.md) as usual. Try to run the same **test-qt.py** script with **pyORBIT** executable
+```bash
+$ORBIT_ROOT/bin/pyORBIT test-qt.py
 ```
