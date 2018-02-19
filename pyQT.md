@@ -40,3 +40,10 @@ python test-qt.py
 ```bash
 $ORBIT_ROOT/bin/pyORBIT test-qt.py
 ```
+
+Following imports will set Qt5 as a backend for matplotlib
+```python
+import matplotlib
+matplotlib.use('Qt5Agg')
+import matplotlib.pyplot as plt
+```
