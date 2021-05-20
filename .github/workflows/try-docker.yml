@@ -10,5 +10,4 @@ jobs:
          - uses: actions/checkout@v2
          - name: Log the node version
            run: |
-             node -v
-             cat /etc/os-release
+             ls -alh /
