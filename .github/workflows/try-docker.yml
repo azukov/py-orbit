@@ -10,4 +10,5 @@ jobs:
          - uses: actions/checkout@v2
          - name: Log the node version
            run: |
+             yum install -y gcc gcc-c++ make python2 python2-devel mpich mpich-devel zlib-devel fftw-devel
              ls -alh /github/home /__w/py-orbit/py-orbit
