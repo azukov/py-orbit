@@ -1,10 +1,13 @@
-name: learn-github-actions
-on: [push]
+name: container
+on: push
+
 jobs:
-  check-bats-version:
+  node-docker:
     runs-on: ubuntu-latest
+    container:
+      image: node:14.15.0-alpine3.12
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install -g bats
-      - run: bats -v
+         - name: Log the node version
+           run: |
+             node -v
+             cat /etc/os-release
