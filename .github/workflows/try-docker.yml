@@ -7,7 +7,9 @@ jobs:
     container:
       image: node:14.15.0-alpine3.12
     steps:
-         - uses: actions/checkout@v2
+         - name: Checkout py-orbit
+           uses: actions/checkout@v2
+           path: ppp
          - name: Log the node version
            run: |
              ls -alh /github/home /__w/py-orbit
