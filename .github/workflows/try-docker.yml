@@ -10,4 +10,4 @@ jobs:
          - uses: actions/checkout@v2
          - name: Log the node version
            run: |
-             ls -alh /github/pyorbit /__w/home
+             ls -alh /github/homep /__w/py-orbit
