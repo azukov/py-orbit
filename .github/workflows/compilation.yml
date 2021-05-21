@@ -22,5 +22,6 @@ jobs:
 
          - name: Test
            run: |
+             .github/workflows/run-tests.sh
              cd examples/AccLattice_Tests
              ./START.sh lattice_test.py 2
