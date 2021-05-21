@@ -13,10 +13,7 @@ jobs:
 
          - name: Make
            run: |
-             . $(pwd)/setupEnvironment.sh
-             make clean
-             make
-
+             .github/workflows/build.sh
          - name: Test
            run: |
              .github/workflows/run-tests.sh
@@ -36,9 +33,7 @@ jobs:
 
          - name: Make
            run: |
-             . $(pwd)/setupEnvironment.sh
-             make clean
-             make
+             .github/workflows/build.sh
 
          - name: Test
            run: |
