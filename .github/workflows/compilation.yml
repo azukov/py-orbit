@@ -33,7 +33,7 @@ jobs:
          - name: Install packages
            run: |
              apt update
-             apt install build-essential python-dev libmpich-dev mpich  zlib1g-dev libfftw3-dev
+             apt install -y build-essential python-dev libmpich-dev mpich  zlib1g-dev libfftw3-dev
 
          - name: Make
            run: |
