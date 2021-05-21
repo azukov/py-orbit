@@ -1,7 +1,6 @@
 name: build-pyorbit
 on: push
 jobs:
-
  centos-8:
     runs-on: ubuntu-latest
     container:
