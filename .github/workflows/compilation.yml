@@ -13,6 +13,7 @@ jobs:
              apt update
              DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata
              apt install -y build-essential python-dev libmpich-dev mpich  zlib1g-dev libfftw3-dev
+             pwd
 
          - name: Make
            run: |
