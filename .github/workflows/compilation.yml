@@ -11,6 +11,7 @@ jobs:
          - name: Install packages
            run: |
              apt update
+             DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata
              apt install -y build-essential python-dev libmpich-dev mpich  zlib1g-dev libfftw3-dev
 
          - name: Make
