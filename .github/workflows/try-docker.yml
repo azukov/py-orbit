@@ -10,11 +10,11 @@ jobs:
          - uses: actions/checkout@v2
          - name: Install packages
            run: |
-             yum install -y gcc gcc-c++ make python2 python2-devel mpich mpich-devel zlib-devel fftw-devel
+             # yum install -y gcc gcc-c++ make python2 python2-devel mpich mpich-devel zlib-devel fftw-devel
          
          - name: Run make
            run: |
              cd /__w/py-orbit/py-orbit
              cat setupEnvironment.sh
-             source setupEnvironment.sh
+             "source setupEnvironment.sh"
              # make
