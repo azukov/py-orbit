@@ -15,5 +15,5 @@ jobs:
          - name: Run make
            run: |
              cd /__w/py-orbit/py-orbit
-             source setupEnvironment.sh
-             make
+             cat setupEnvironment.sh
+             # make
