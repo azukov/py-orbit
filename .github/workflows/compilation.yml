@@ -2,7 +2,7 @@ name: build-pyorbit
 on: push
 
 jobs:
-  node-docker:
+  centos-docker::
     runs-on: ubuntu-latest
     container:
       image: centos:centos8
