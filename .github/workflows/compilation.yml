@@ -19,7 +19,7 @@ jobs:
            run: |
              # cd /__w/py-orbit/py-orbit
              cat setupEnvironment.sh
-             . setupEnvironment.sh
+             . $(pwd)/setupEnvironment.sh
              # make clean
              # make
 
