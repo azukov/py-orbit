@@ -23,3 +23,26 @@ jobs:
          - name: Test
            run: |
              .github/workflows/run-tests.sh
+
+  ubuntu21.04:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:21.04
+    steps:
+         - uses: actions/checkout@v2
+         - name: Install packages
+           run: |
+             apt-get install build-essential
+             apt-get install python-dev libmpich-dev mpich  zlib1g-dev libfftw3-dev
+
+         - name: Make
+           run: |
+             cd /__w/py-orbit/py-orbit
+             cat setupEnvironment.sh
+             source /__w/py-orbit/py-orbit/setupEnvironment.sh
+             make clean
+             make
+
+         - name: Test
+           run: |
+             .github/workflows/run-tests.sh
