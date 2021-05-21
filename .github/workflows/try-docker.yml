@@ -1,4 +1,4 @@
-name: container
+name: build-pyorbit
 on: push
 
 jobs:
@@ -16,6 +16,8 @@ jobs:
            run: |
              cd /__w/py-orbit/py-orbit
              cat setupEnvironment.sh
-             # python27 -v
              source /__w/py-orbit/py-orbit/setupEnvironment.sh
+             make clean
              make
+             cd examples/AccLattice_Tests
+             ./START.sh lattice_test.py 2
