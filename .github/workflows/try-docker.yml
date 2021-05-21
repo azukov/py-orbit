@@ -16,5 +16,6 @@ jobs:
            run: |
              cd /__w/py-orbit/py-orbit
              cat setupEnvironment.sh
+             python27 -v
              source /__w/py-orbit/py-orbit/setupEnvironment.sh
              # make
