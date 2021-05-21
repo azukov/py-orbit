@@ -11,17 +11,15 @@ jobs:
          - name: Install packages
            run: |
              pwd
-           #  apt update
-           #  DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata
-           #  apt install -y build-essential python-dev libmpich-dev mpich  zlib1g-dev libfftw3-dev
+             apt update
+             DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata
+             apt install -y build-essential python-dev libmpich-dev mpich  zlib1g-dev libfftw3-dev
 
          - name: Make
            run: |
-             # cd /__w/py-orbit/py-orbit
-             cat setupEnvironment.sh
              . $(pwd)/setupEnvironment.sh
-             # make clean
-             # make
+             make clean
+             make
 
          - name: Test
            run: |
