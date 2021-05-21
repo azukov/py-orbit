@@ -24,7 +24,7 @@ jobs:
            run: |
              .github/workflows/run-tests.sh
 
-  ubuntu21.04:
+  ubuntu-2104:
     runs-on: ubuntu-latest
     container:
       image: ubuntu:21.04
