@@ -1,7 +1,27 @@
 name: build-pyorbit
 on: push
-
 jobs:
+
+ centos-8:
+    runs-on: ubuntu-latest
+    container:
+      image: centos:centos8
+    steps:
+         - uses: actions/checkout@v2
+         - name: Install packages
+           run: |
+             yum install -y gcc gcc-c++ make python2 python2-devel mpich mpich-devel zlib-devel fftw-devel
+
+         - name: Make
+           run: |
+             . $(pwd)/setupEnvironment.sh
+             make clean
+             make
+
+         - name: Test
+           run: |
+             .github/workflows/run-tests.sh
+
   ubuntu-2004:
     runs-on: ubuntu-latest
     container:
