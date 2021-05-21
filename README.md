@@ -2,6 +2,9 @@
 
 ### Testing actions and PR. Trying again... and again...
 ![Build](https://github.com/azukov/py-orbit/actions/workflows/compilation.yml/badge.svg)
+
+![Build](../../actions/workflows/compilation.yml/badge.svg)
+
 # Py-ORBIT  Installation
 
 Installation procedure requires building from source.
