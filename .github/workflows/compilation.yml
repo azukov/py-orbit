@@ -18,7 +18,7 @@ jobs:
            run: |
              cd /__w/py-orbit/py-orbit
              cat setupEnvironment.sh
-             source /__w/py-orbit/py-orbit/setupEnvironment.sh
+             . /__w/py-orbit/py-orbit/setupEnvironment.sh
              make clean
              make
 
